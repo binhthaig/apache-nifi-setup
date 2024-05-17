@@ -23,6 +23,12 @@ docker logs -f nifi
 ```
 Open the URL https://localhost:8443/nifi
 
+Create new user:
+```shell
+docker exec -it -u 0 nifi bash // Access docker container
+./bin/nifi.sh set-single-user-credentials admin password@$1234 // Create user.
+```
+
 ### 2. Download Connectors and Add Timezone
 
 Dive into container shell, add timezone and download JARs & NARs
